@@ -14,6 +14,7 @@
 + 【可选】mail工具需要配置/gear/config目录下mail.json
 + 【可选】微信工具人需要配置/gear/config目录下wechatrobot.json
 
+
 ## 3.功能介绍
 ### 3.1 数据库查询功能 DB
 > 下面代码以查询为例，这里介绍配置文件配置:
