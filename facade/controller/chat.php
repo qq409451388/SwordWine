@@ -3,7 +3,7 @@ class Chat extends BaseController
 {
     public function websocket($request){
         return $this->show([
-            "chatServer"=>"ws://192.168.0.109:8100"
+            "chatServer"=>"ws://".Env::getIp().":8100"
         ], "websocket");
     }
 

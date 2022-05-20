@@ -16,4 +16,4 @@ include(dirname(__FILE__, 2) . "/autoload.php");
 ini_set("memory_limit", "1024m");
 ini_set("date.timezone", "Asia/Shanghai");
 $http = new Http((new Gear())->init($userClasses));
-$http->init($argv[1]??LOCAL_HOST, $argv[2]??80, STATIC_PATH)->start();
+$http->init($argv[1]??LOCAL_HOST, $argv[2]??8101, STATIC_PATH)->start();
