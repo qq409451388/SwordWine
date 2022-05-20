@@ -1,3 +1,0 @@
-{
-  "centos": {"host": "192.168.33.128","user": "root","pwd": "123456","dbType": "mysql"}
-}
