@@ -18,14 +18,24 @@ class World extends AbstractScene
     }
 
     public function init(){
-        $sceneConfig = Config::get("scene");
-        $this->putScene(new Scene("光明顶", 8, 8), 0, 6);
-        $this->putScene(new Scene("天山", 8, 8), 2, 7);
-        $this->putScene(new Scene("少林", 8, 8), 10, 6);
-        $this->putScene(new Scene("武当", 8, 8), 8, 4);
-        $this->putScene(new Scene("峨眉", 8, 8), 5, 2);
-        $this->putScene(new Scene("五毒", 8, 8), 7, 1);
+        $sceneConfig = Config::get("scene", MUD_PATH);
+        self::putScenes($sceneConfig, $this);
         return $this;
+    }
+
+    /**
+     * 递归加载场景配置
+     * @param $sceneConfig
+     * @param $targetScene
+     */
+    private static function putScenes($sceneConfig, $targetScene){
+        foreach($sceneConfig as $config){
+            $scene = new Scene($config['name'], $config['regionX'], $config['regionY'],
+                $config['level'], $config['locateX'], $config['locateY']);
+            DBC::assertTrue($scene->isValid(), "[World Exception] Init SceneList Fail! Data:".EzString::encodeJson($scene));
+            World::putScenes($config['nextLevelConfig']??[], $scene);
+            $targetScene->putScene($scene, $scene->getLocateX(), $scene->getLocateY());
+        }
     }
 
     /**

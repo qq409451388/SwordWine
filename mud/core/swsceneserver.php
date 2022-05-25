@@ -26,7 +26,6 @@ class SwSceneServer
             if(is_null($msgData)){
                 return;
             }
-            var_dump($msgData);
             $this->server->sendToUser($socket, EzString::encodeJson(["html"=>$this->world->showHtml()]));
         }, function($socket, $key){
             $data = [

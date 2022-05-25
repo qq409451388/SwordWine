@@ -1,0 +1,8 @@
+[
+  {"name": "明教", "locateX": 0, "locateY": 6, "level": 2,  "regionX": 10, "regionY": 10},
+  {"name": "天山", "locateX": 2, "locateY": 7, "level": 2,  "regionX": 10, "regionY": 10},
+  {"name": "武当", "locateX": 8, "locateY": 4, "level": 2,  "regionX": 10, "regionY": 10},
+  {"name": "少林", "locateX": 10, "locateY": 6, "level": 2,  "regionX": 10, "regionY": 10},
+  {"name": "峨眉", "locateX": 5, "locateY": 2, "level": 2,  "regionX": 10, "regionY": 10},
+  {"name": "五毒", "locateX": 7, "locateY": 1, "level": 2,  "regionX": 10, "regionY": 10}
+]

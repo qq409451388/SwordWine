@@ -3,7 +3,7 @@
  * 聊天服务器启动器
  */
 const MUD_PATH = __DIR__."/../";
-const CORE_PATH = MUD_PATH . "/gear";
+const CORE_PATH = MUD_PATH . "/Gear";
 const CUSTOM_PATH = [
     MUD_PATH . "/mud"
 ];

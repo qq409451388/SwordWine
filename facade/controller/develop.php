@@ -1,7 +1,7 @@
 <?php
-class Test extends BaseController
+class Develop extends BaseController
 {
-    public function table(){
+    public function map(){
         return $this->show([
             "chatServer"=>"ws://".Env::getIp().":8111"
         ], "tabletest");
