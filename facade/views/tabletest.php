@@ -8,7 +8,9 @@
     ws = new EzWebSocket("<?php echo $chatServer;?>");
     ws.init("test", onMessageIn);
 
-    ws.send("test", "213");
+    setTimeout(function(){
+        ws.sendToUser("test","asd");
+    }, 1000)
     function onMessageIn(message){
         console.log(JSON.stringify(message));
         $("#main").html(message.html);

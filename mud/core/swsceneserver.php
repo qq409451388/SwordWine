@@ -27,14 +27,6 @@ class SwSceneServer
                 return;
             }
             $this->server->sendToUser($socket, EzString::encodeJson(["html"=>$this->world->showHtml()]));
-        }, function($socket, $key){
-            $data = [
-                'key' => $key,
-                "dataType" => self::ONLINE
-            ];
-            $data = EzString::encodeJson($data);
-            $this->server->sendToUser($socket, $data);
-        }, function($startSucc, $except){
         });
     }
 }
