@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * SwordWine聊天服务器
+ */
 class SwChatServer
 {
     private $userSvc;
